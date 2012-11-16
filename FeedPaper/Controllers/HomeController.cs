@@ -8,6 +8,8 @@ namespace FeedPaper.Controllers
 {
     public class HomeController : Controller
     {
+        public const string AboutFeedpaperDescription = "Feed Paper is the 21st century equivalent of a newspaper.  Add RSS feeds and Feed Paper will assemble them into a newspaper for you.  It's that simple.";
+
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
@@ -17,7 +19,7 @@ namespace FeedPaper.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your app description page.";
+            ViewBag.Description = AboutFeedpaperDescription;
 
             return View();
         }

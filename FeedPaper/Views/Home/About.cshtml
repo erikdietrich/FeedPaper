@@ -1,34 +1,26 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "About Feedpaper";
 }
 
 <hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
+    <h1>@ViewBag.Title</h1>
     <h2>@ViewBag.Message</h2>
 </hgroup>
 
 <article>
     <p>
-        Use this area to provide additional information.
-    </p>
-
-    <p>
-        Use this area to provide additional information.
-    </p>
-
-    <p>
-        Use this area to provide additional information.
+        @ViewBag.Description
     </p>
 </article>
 
 <aside>
-    <h3>Aside Title</h3>
+    <h3>Blogs to Check Out</h3>
     <p>
-        Use this area to provide additional information.
+        Here are some of the more popular blogs with readers.
     </p>
     <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li><a href="http://www.daedtech.com/blog">DaedTech</a></li>
+        <li><a href="http://www.hanselman.com/blog/">Scott Hanselman's Blog</a></li>
+        <li><a href="http://thedailywtf.com/">The Daily WTF</a></li>
     </ul>
 </aside>

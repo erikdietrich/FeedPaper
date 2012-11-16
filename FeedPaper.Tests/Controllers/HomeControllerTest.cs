@@ -15,27 +15,31 @@ namespace FeedPaper.Tests.Controllers
         [TestMethod]
         public void Index()
         {
-            // Arrange
-            HomeController controller = new HomeController();
+            var controller = new HomeController();
+            var result = controller.Index() as ViewResult;
 
-            // Act
-            ViewResult result = controller.Index() as ViewResult;
-
-            // Assert
             Assert.AreEqual("Modify this template to jump-start your ASP.NET MVC application.", result.ViewBag.Message);
         }
 
-        [TestMethod]
-        public void About()
+        [TestClass]
+        public class About
         {
-            // Arrange
-            HomeController controller = new HomeController();
+            [TestMethod, Owner("ebd"), TestCategory("Proven"), TestCategory("Unit")]
+            public void Returns_Non_Null_ViewResult()
+            {
+                var controller = new HomeController();
 
-            // Act
-            ViewResult result = controller.About() as ViewResult;
+                Assert.IsNotNull(controller.About() as ViewResult);
+            }
 
-            // Assert
-            Assert.IsNotNull(result);
+            [TestMethod, Owner("ebd"), TestCategory("Proven"), TestCategory("Unit")]
+            public void Returns_ViewResult_With_Description_Matching_Class_Description()
+            {
+                var controller = new HomeController();
+                var result = controller.About() as ViewResult;
+
+                Assert.AreEqual(HomeController.AboutFeedpaperDescription, result.ViewBag.Description);
+            }
         }
 
         [TestMethod]
