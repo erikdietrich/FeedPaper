@@ -18,7 +18,7 @@ namespace FeedPaper.Tests.Controllers
             var controller = new HomeController();
             var result = controller.Index() as ViewResult;
 
-            Assert.AreEqual("Modify this template to jump-start your ASP.NET MVC application.", result.ViewBag.Message);
+            Assert.IsNotNull(result.ViewBag.Message);
         }
 
         [TestClass]

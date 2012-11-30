@@ -12,7 +12,7 @@ namespace FeedPaper.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            ViewBag.Message = "Coming soon, and, when it does, not looking suspciously like the default MVC site.";
 
             return View();
         }
