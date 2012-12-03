@@ -12,7 +12,7 @@ namespace FeedPaper.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Message = "Coming soon, and, when it does, not looking suspciously like the default MVC site.";
+            ViewBag.Message = "Coming soon, and, when it does, not looking suspiciously like the default MVC site.";
 
             return View();
         }
